@@ -1,0 +1,15 @@
+.landingpage {
+    display: grid;
+    place-content: center;
+    background-image: url("../images/school.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.choice>a {
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 3px 2px 10px black;
+}

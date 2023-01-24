@@ -1,0 +1,40 @@
+.login__student {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-image: url("../images/students.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.login__teacher {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-image: url("../images/teacher.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+
+.student__box, .teacher__box {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 60vw;
+    padding: 5rem 30%;
+}
+.student__box>h1, .teacher__box>h1 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.box__form {
+    display: grid;
+}
+.box__form>input {
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+.box__form>label {
+    font-weight: 500;
+    color: white;
+}
