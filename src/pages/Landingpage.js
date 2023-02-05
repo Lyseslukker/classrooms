@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 export default function Landingpage() {
     return (
         <div className='landingpage'>
-            <div className="choice">
-                <Link to="/login">Login</Link>
-                <Link to="/signup">Signup</Link>
+            <div className="landingpage__choice">
+                <Link className='choice__btn choice__login' to="/login">Login</Link>
+                <Link className='choice__btn choice__signup' to="/signup">Signup</Link>
             </div>
         </div>
     )
