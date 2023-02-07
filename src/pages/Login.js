@@ -1,12 +1,32 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import LoginForm from '../components/LoginForm';
+import { useCookies } from 'react-cookie';
 import "../components/LoginForm.css"
 
 export default function SignUp() {
 
     const roleStudent = useRef()
     const roleTeacher = useRef()
-    const [loginState, setLoginState] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(false);
+
+    const [cookies, setCookies] = useCookies();
+
+
+    useEffect(() => {
+        fetch("http://localhost:3500/login")
+            .then((response) => {
+                return response.json()
+            })
+            .then((data) => {
+                console.log(data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }, []);
+
+
+    console.log(cookies)
 
 
     const [role, setRole] = useState("student")
@@ -27,6 +47,14 @@ export default function SignUp() {
             roleTeacher.current.classList.remove("deactivated")
         }
     }
+
+
+    // const mytestcookie = {
+    //     id: "heheheheheh",
+    //     name: "Hansen Hans"
+    // }
+    // const stringifytestcookie = JSON.stringify(mytestcookie)
+    // console.log("The test cookie: ", stringifytestcookie)
 
 
     return (
