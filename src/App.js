@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css"
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Navigation from "./pages/Navigation";
 import Landingpage from "./pages/Landingpage"
 import Login from "./pages/Login"
@@ -17,6 +17,8 @@ import StudentClassroom from "./pages/StudentClassroom"
 
 
 function App() {
+
+  console.log("App.js loaded")
 
   return (
     <div className="App">

@@ -1,9 +1,10 @@
 import React, { useState, useRef } from 'react'
-import { Link } from 'react-router-dom';
 import "./SignUp.css"
 import SignupForm from '../components/SignupForm';
 
 export default function SignUp() {
+
+    console.log("SignUp.js loaded")
 
     const roleStudent = useRef()
     const roleTeacher = useRef()
@@ -57,4 +58,10 @@ export default function SignUp() {
             </div>
         )
     }
+
+    return (
+        <div className="hmm">
+            <h1>Loading</h1>
+        </div>
+    )
 }
