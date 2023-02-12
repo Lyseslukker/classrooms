@@ -16,11 +16,23 @@ export default function LoginForm() {
     // HANDELERS
     const loginFormHandler = (e) => {
         e.preventDefault()
+        const screen = {
+            width: window.screen.width,
+            angle: window.screen.orientation.angle
+        }
+        // const screenString = JSON.stringify(screen)
+
+        let myLoginObject = {
+            credentials: login,
+            screen: screen
+        }
         
         fetch("http://localhost:3500/login", {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(login),
+            headers: { 
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(myLoginObject),
             mode: "cors",
             credentials: "include"
         })
