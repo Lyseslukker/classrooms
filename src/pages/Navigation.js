@@ -8,16 +8,15 @@ export default function Navigation() {
     return (
         <div className='navigation'>
             <nav className='nav'>
-                <div className="nav__darkmode">
-                    {/* <Link className='darkmode__moon'> <BsFillMoonFill />  </Link> */}
-                    {/* <Link className='darkmode__sun'> <BsSunFill />  </Link> */}
-                    <BsSunFill />
-                </div>
                 <div className="nav__group">
                     {/* <Link> <BsFillBookmarkFill /> </Link>
                     <Link> <FaChalkboardTeacher /> </Link> */}
                     <BsFillBookmarkFill />
-                    <FaChalkboardTeacher />
+                </div>
+                <div className="nav__darkmode">
+                    {/* <Link className='darkmode__moon'> <BsFillMoonFill />  </Link> */}
+                    {/* <Link className='darkmode__sun'> <BsSunFill />  </Link> */}
+                    <BsSunFill />
                 </div>
             </nav>
 

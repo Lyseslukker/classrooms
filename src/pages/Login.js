@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import LoginForm from '../components/LoginForm';
 import { useCookies } from 'react-cookie';
+import "../pages/Login.css"
 import "../components/LoginForm.css"
 
 export default function SignUp() {
@@ -8,6 +9,8 @@ export default function SignUp() {
     const roleStudent = useRef()
     const roleTeacher = useRef()
 
+    // sessionStorage.clear()
+    
 
     const [role, setRole] = useState("student")
 
@@ -31,8 +34,8 @@ export default function SignUp() {
 
 
     return (
-        <div className='signup'>
-            <div className="signup__box">
+        <div className='login'>
+            <div className="login__box">
                 <div className="box__role">
                     <div ref={roleStudent} onClick={roleHandler} custom-role="student" className="role__student"> <h3>Student</h3> </div>
                     <div ref={roleTeacher} onClick={roleHandler} custom-role="teacher" className="role__teacher deactivated"> <h3>Teacher</h3> </div>

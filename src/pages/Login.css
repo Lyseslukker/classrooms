@@ -1,8 +1,23 @@
-.signup {
+.login {
+    display: none;
+}
+.login {
     display: grid;
+    transition: ease-in 1s;
     place-content: center;
     background: rgb(30,58,138);
     background: linear-gradient(90deg, rgba(30,58,138,1) 0%, rgba(96,165,250,1) 100%);
+}
+
+.login__box {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 30vw;
+    min-height: 80vh;
+    max-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+    background-color: #FAFAFA;
 }
 
 .box__role {
@@ -13,16 +28,6 @@
     align-items: end;
 }
 
-.signup__box {
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    width: 30vw;
-    min-height: 80vh;
-    max-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr 8fr;
-    background-color: #FAFAFA;
-}
 
 .role__student {
     transition: 300ms;

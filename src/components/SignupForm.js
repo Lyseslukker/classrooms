@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Navigate } from 'react-router-dom';
 import "./SignupForm.css"
 
 export default function SignupForm({ role, signupFunction, signupStateHandler }) {
+
+    const [redirect, setRedirect] = useState(false);
 
     const submitBtnRef = useRef()
     const emailRef = useRef()
@@ -228,6 +231,9 @@ export default function SignupForm({ role, signupFunction, signupStateHandler })
         })
         .then((data) => {
             console.log("Reponse: ", data)
+            if (data.reason === "redirect") {
+                setRedirect(true)
+            }
             const errorOrNot = data.filter((state) => {
                 return state.status === "rejected"
             })
@@ -244,6 +250,11 @@ export default function SignupForm({ role, signupFunction, signupStateHandler })
         .catch((err) => {
             console.error(err)
         })
+    }
+
+
+    if (redirect === true) {
+        return <Navigate to="/login" />
     }
     
 

@@ -13,6 +13,8 @@ import StudentHome from "./pages/StudentHome"
 import StudentSchools from "./pages/StudentSchools"
 import StudentClassrooms from "./pages/StudentClassrooms"
 import StudentClassroom from "./pages/StudentClassroom"
+import Home from "./pages/Home";
+import NewClassroom from "./pages/NewClassroom";
 
 
 
@@ -28,14 +30,17 @@ function App() {
           <Route index element={<Landingpage />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
-          <Route path="teacherhome" element={<TeacherHome />} />
+          <Route path="home" element={<Home />} />
+          <Route path="newclassroom" element={<NewClassroom />} />
+
+          {/* <Route path="teacherhome" element={<TeacherHome />} />
           <Route path="teacherschools" element={<TeacherSchools />} />
           <Route path="teacherclassrooms" element={<TeacherClassrooms />} />
           <Route path="teacherclassroom" element={<TeacherClassroom />} />
           <Route path="studenthome" element={<StudentHome />} />
           <Route path="studentschools" element={<StudentSchools />} />
           <Route path="studentclassrooms" element={<StudentClassrooms />} />
-          <Route path="studentclassroom" element={<StudentClassroom />} />
+          <Route path="studentclassroom" element={<StudentClassroom />} /> */}
         </Route>
       </Routes>
 
